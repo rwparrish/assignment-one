@@ -9,10 +9,17 @@ class App extends Component {
     username: 'Ryan'
   }
 
+  changeUsernameHandler = () => {
+    this.setState({
+      username: 'RINO'
+    })
+  }
+
   render () {
     return (
       <div>
-        <UserOutput 
+        <UserOutput
+          click={this.changeUsernameHandler}
           username={this.state.username} />
         <UserOutput 
           username={this.state.username} />
