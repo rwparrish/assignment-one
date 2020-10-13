@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import { Component } from 'react';
 import UserOutput from './User/UserOutput';
+import UserInput from './User/UserInput';
 
 class App extends Component {
 
@@ -9,15 +10,23 @@ class App extends Component {
     username: 'Ryan'
   }
 
-  changeUsernameHandler = () => {
+  changeUsernameHandler = (event) => {
     this.setState({
-      username: 'RINO'
+      username: event.target.value
     })
   }
 
   render () {
+
+    const style = {
+      
+    }
+
     return (
       <div>
+        <UserInput
+          changeUsername={this.changeUsernameHandler}
+          username={this.state.username} />
         <UserOutput
           click={this.changeUsernameHandler}
           username={this.state.username} />
