@@ -13,14 +13,14 @@ class App extends Component {
   changeUsernameHandler = event => {
     this.setState({
       username: event.target.value
-    })
+    });
   }
 
   render () {
 
     return (
       <div>
-        <UserInput changeUsername={this.changeUsernameHandler} userName={this.state.username} />
+        <UserInput changedUsername={this.changeUsernameHandler} userName={this.state.username} currentName={this.state.username} />
         <UserOutput click={this.changeUsernameHandler} userName={this.state.username} />
         <UserOutput userName={this.state.username} />
         <UserOutput userName={this.state.username}/>

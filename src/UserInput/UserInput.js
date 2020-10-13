@@ -3,15 +3,14 @@ import React from 'react'
 const userInput = props => {
 
     const style = {
-        backgroundColor: 'blue',
+        display: 'inline',
+        textAlign: 'center',
         font: 'inherit',
-        border: '1x solid blue',
-        padding: '8px',
-        cursor: 'pointer'
+        border: '2x solid blue',
       };
 
     return (
-      <input style={style} onChange={props.changeUsername} type="text" value={props.userName}/>
+      <input type="text" style={style} onChange={props.changedUsername} value={props.currentName}/>
     )
 }
 
