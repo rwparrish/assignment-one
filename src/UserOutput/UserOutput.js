@@ -1,7 +1,6 @@
 import React from 'react'
-import './User.css'
 
-function UserOutput(props) {
+const userOutput = props => {
     
     return (
         <div className='User'>
@@ -11,4 +10,4 @@ function UserOutput(props) {
     )
 }
 
-export default UserOutput
+export default userOutput

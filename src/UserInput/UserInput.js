@@ -1,6 +1,6 @@
 import React from 'react'
 
-function UserInput(props) {
+const userInput = props => {
 
     const style = {
         backgroundColor: 'blue',
@@ -11,10 +11,8 @@ function UserInput(props) {
       };
 
     return (
-        <div>
-            <input style={style} onChange={props.changeUsername} type="text" value={props.username}/>
-        </div>
+      <input style={style} onChange={props.changeUsername} type="text" value={props.username}/>
     )
 }
 
-export default UserInput
+export default userInput
